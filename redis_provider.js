@@ -34,4 +34,6 @@ function getRedisURL(callback) {
   }
 };
 
-exports.getRedisURL = getRedisURL;
+module.exports = {
+  "getRedisURL": getRedisURL
+};
