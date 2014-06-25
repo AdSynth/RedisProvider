@@ -1,5 +1,5 @@
 var url     = require('url');
-var logger  = require('./logger');
+var logger  = require('./logger.js');
 
 if (process.env.AWS_ELASTICACHE_REPLICATION_GROUP_ID) {
     var AWS = require('./aws.js');
