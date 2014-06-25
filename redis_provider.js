@@ -22,7 +22,7 @@ function getRedisURL(callback) {
       writeEndpoint = result.primaryEndpoint;
       // logger.log("debug", "writeEndpoint = ");
       // logger.log("debug", writeEndpoint);
-      redisUrl = "http://" + writeEndpoint.Address + writeEndpoint.Port;
+      redisUrl = "http://" + writeEndpoint.Address + ":" + writeEndpoint.Port;
       callback(null, redisUrl);
     });
   }
