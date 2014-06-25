@@ -1,5 +1,5 @@
 var AWS 	= require('aws-sdk');
-var logger  = require('./logger');
+var logger  = require('./logger.js');
 
 AWS.config.update({region: 'us-east-1'});
 
