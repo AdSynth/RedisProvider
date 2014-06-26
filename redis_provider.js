@@ -22,14 +22,14 @@ function getRedisURL(callback) {
       writeEndpoint = result.primaryEndpoint;
       // logger.log("debug", "writeEndpoint = ");
       // logger.log("debug", writeEndpoint);
-      redisUrl = "http://" + writeEndpoint.Address + ":" + writeEndpoint.Port;
+      redisUrl = url.parse("http://" + writeEndpoint.Address + ":" + writeEndpoint.Port);
       callback(null, redisUrl);
     });
   }
   else {
     // otherwise use localhost
     logger.log("info", "redis provider = localhost");
-    redisUrl = "redis://localhost:6379/";
+    redisUrl = url.parse("redis://localhost:6379/");
     callback(null, redisUrl);
   }
 };
